@@ -1,0 +1,41 @@
+<svg width="860" height="300" viewBox="0 0 860 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">S.M Design &amp; Construction logo</title>
+  <desc id="desc">A gold architectural mark with the words S.M Design &amp; Construction.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE76A"/>
+      <stop offset="0.48" stop-color="#D5A51F"/>
+      <stop offset="1" stop-color="#A97518"/>
+    </linearGradient>
+    <linearGradient id="softGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF0A3"/>
+      <stop offset="1" stop-color="#C48A1A"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M101 190H245L173 40L101 190Z" fill="url(#gold)"/>
+    <path d="M173 40L194 86V190H152V86L173 40Z" fill="#FFE76A"/>
+    <path d="M125 141H221V157H125V141Z" fill="#10100E"/>
+    <path d="M139 108H207V124H139V108Z" fill="#10100E"/>
+    <path d="M119 174H227V190H119V174Z" fill="#10100E"/>
+    <path d="M82 190H114L98 154L82 190Z" fill="url(#softGold)"/>
+    <path d="M232 190H264L248 154L232 190Z" fill="url(#softGold)"/>
+  </g>
+
+  <g>
+    <text x="305" y="118" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" letter-spacing="4">
+      S.M
+    </text>
+    <text x="309" y="178" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="3">
+      DESIGN &amp;
+    </text>
+    <text x="309" y="228" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="3">
+      CONSTRUCTION
+    </text>
+    <path d="M309 247H735" stroke="#B68D40" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Satoshi", "General Sans", sans-serif;
+  --font-serif: "Playfair Display", "Canela", "Editorial New", serif;
+
+  --color-warm-white: #F7F5F2;
+  --color-soft-beige: #EAE4DC;
+  --color-rich-bronze: #B68D40;
+  --color-charcoal-black: #111111;
+
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-fade-up: fade-up 1s ease-out forwards;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-warm-white text-charcoal-black antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium;
+  }
+
+  @media (pointer: fine) {
+    html, body {
+      cursor: none;
+    }
+    a, button, [role="button"], .cursor-pointer {
+      cursor: none !important;
+    }
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rich-bronze to-[#d4af37];
+  }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
