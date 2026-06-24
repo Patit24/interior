@@ -109,7 +109,7 @@ const Services = () => {
                       </p>
                     </div>
                 <a
-                  href={`https://wa.me/917074802534?text=Hello%20AS%20Interior%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}%20services.`}
+                  href={`https://wa.me/917074802534?text=Hello%20S.M%20Design%20%26%20Construction%2C%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 w-full py-3 bg-rich-bronze text-warm-white rounded-xl text-center text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-black transition-colors duration-300 flex items-center justify-center gap-2 group-hover:scale-[1.02] active:scale-[0.98]"
