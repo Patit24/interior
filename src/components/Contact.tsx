@@ -116,9 +116,10 @@ const Contact = () => {
                 <div>
                   <select
                     required
+                    defaultValue=""
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm text-warm-white/60 focus:outline-none focus:border-rich-bronze/50 transition-colors appearance-none"
                   >
-                    <option value="" disabled selected className="bg-charcoal-black text-warm-white">Select Service Required</option>
+                    <option value="" disabled className="bg-charcoal-black text-warm-white">Select Service Required</option>
                     <option value="residential" className="bg-charcoal-black text-warm-white">Residential Design</option>
                     <option value="kitchen" className="bg-charcoal-black text-warm-white">Modular Kitchen</option>
                     <option value="bedroom" className="bg-charcoal-black text-warm-white">Bedroom Interior</option>
@@ -158,7 +159,7 @@ const Contact = () => {
           <div className="flex flex-col gap-2 items-start">
             <div className="flex items-center gap-4">
               <img 
-                src="/images/logo.svg" 
+                src={`${import.meta.env.BASE_URL}images/logo.svg`}
                 alt="S.M Design & Construction Logo" 
                 className="h-20 md:h-24 w-auto object-contain" 
               />

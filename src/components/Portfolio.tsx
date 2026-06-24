@@ -1,45 +1,48 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const imagePath = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
+
 const projects = [
   {
     id: 1,
     title: 'The Obsidian Oasis',
     category: 'Living Room',
-    img: '/images/living.png',
+    img: imagePath('living.png'),
     size: 'col-span-1 md:col-span-2 row-span-1',
   },
   {
     id: 2,
     title: 'Culinary Masterclass',
     category: 'Kitchen',
-    img: '/images/kitchen.png',
+    img: imagePath('kitchen.png'),
     size: 'col-span-1 row-span-1',
   },
   {
     id: 3,
     title: 'Serenity Chamber',
     category: 'Bedroom',
-    img: '/images/bedroom.png',
+    img: imagePath('bedroom.png'),
     size: 'col-span-1 row-span-1',
   },
   {
     id: 4,
     title: 'Architects HQ',
     category: 'Office',
-    img: '/images/office.png',
+    img: imagePath('office.png'),
     size: 'col-span-1 md:col-span-2 row-span-1',
   },
   {
     id: 5,
     title: 'The Luxe Lobby',
     category: 'Commercial',
-    img: '/images/commercial.png',
+    img: imagePath('commercial.png'),
     size: 'col-span-1 row-span-1',
   },
 ];
 
 const Portfolio = () => {
+  const livingRoomImage = `url("${imagePath('living.png')}")`;
   const [filter, setFilter] = useState('All');
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isSliding, setIsSliding] = useState(false);
@@ -115,7 +118,7 @@ const Portfolio = () => {
             {/* After: Living room finished */}
             <div 
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: 'url("/images/living.png")' }}
+              style={{ backgroundImage: livingRoomImage }}
             />
             {/* Label After */}
             <div className="absolute right-6 top-6 bg-charcoal-black/70 backdrop-blur-sm text-warm-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-lg pointer-events-none">
@@ -126,7 +129,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center transition-all"
               style={{ 
-                backgroundImage: 'url("/images/living.png")',
+                backgroundImage: livingRoomImage,
                 filter: 'grayscale(1) invert(0.85) sepia(0.3) contrast(1.5)',
                 clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)`
               }}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 const About = () => {
+  const livingRoomImage = `url("${import.meta.env.BASE_URL}images/living.png")`;
 
   return (
     <section id="about" className="py-24 bg-warm-white relative overflow-hidden">
@@ -47,7 +48,7 @@ const About = () => {
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
                 style={{ 
-                  backgroundImage: 'url("/images/living.png")', 
+                  backgroundImage: livingRoomImage,
                   filter: 'grayscale(1) invert(0.9) contrast(2) brightness(0.8)',
                 }}
               />
@@ -60,7 +61,7 @@ const About = () => {
               {/* Image 2: Clean Render (Revealed on hover/scroll/click) */}
               <motion.div 
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: 'url("/images/living.png")' }}
+                style={{ backgroundImage: livingRoomImage }}
                 initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
                 whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                 viewport={{ once: true, margin: "-100px" }}

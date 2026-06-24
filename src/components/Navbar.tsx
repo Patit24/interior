@@ -46,7 +46,7 @@ const Navbar = () => {
           <Magnetic range={30} strength={0.25}>
             <a href="#" className="flex items-center gap-3 group">
               <img 
-                src="/images/logo.svg" 
+                src={`${import.meta.env.BASE_URL}images/logo.svg`}
                 alt="S.M Design & Construction Logo" 
                 className="h-12 md:h-14 w-auto object-contain" 
               />

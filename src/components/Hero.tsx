@@ -26,7 +26,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-black/30 z-10" />
         <img 
-          src="/images/hero.png" 
+          src={`${import.meta.env.BASE_URL}images/hero.png`}
           alt="Luxury Floating Architecture" 
           className="w-full h-full object-cover"
         />
