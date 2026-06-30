@@ -47,13 +47,13 @@ const Navbar = () => {
             <a href="#" className="flex items-center gap-3 group">
               <img 
                 src={`${import.meta.env.BASE_URL}images/logo.svg`}
-                alt="S.M Design & Construction Logo" 
+                alt="AS Interior Studio Logo" 
                 className="h-12 md:h-14 w-auto object-contain" 
               />
               <span className={`sr-only font-serif text-lg md:text-2xl font-semibold transition-colors ${
                 isScrolled ? 'text-charcoal-black' : 'text-warm-white'
               }`}>
-                S.M Design & Construction
+                AS Interior Studio
               </span>
             </a>
           </Magnetic>

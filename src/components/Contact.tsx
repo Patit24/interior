@@ -4,8 +4,19 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this to a backend or EmailJS
-    alert('Thank you for your inquiry! Our design experts will contact you within 24 hours.');
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    const message = [
+      'Hello AS Interior Studio, I would like to make an enquiry.',
+      `Name: ${formData.get('name')}`,
+      `Phone: ${formData.get('phone')}`,
+      `Service: ${formData.get('service')}`,
+      `Budget: ${formData.get('budget') || 'Not specified'}`,
+      `Project Details: ${formData.get('message') || 'Not specified'}`,
+    ].join('\n');
+
+    window.open(`https://wa.me/917074802534?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    form.reset();
   };
 
   return (
@@ -38,8 +49,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-warm-white/40 mb-1">Call Us</h4>
-                    <p className="text-sm font-sans text-warm-white/95 font-medium">+91 70748 02534</p>
-                    <p className="text-sm font-sans text-warm-white/95 font-medium">+91 90830 70734</p>
+                    <p className="text-sm font-sans text-warm-white/95 font-medium">070748 02534</p>
                   </div>
                 </div>
 
@@ -49,8 +59,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-warm-white/40 mb-1">Email Us</h4>
-                    <a href="mailto:aziminterior07@gmail.com" className="text-sm font-sans text-warm-white/95 font-medium hover:text-rich-bronze transition-colors">
-                      aziminterior07@gmail.com
+                    <a href="mailto:skajimali07@gmail.com" className="text-sm font-sans text-warm-white/95 font-medium hover:text-rich-bronze transition-colors">
+                      skajimali07@gmail.com
                     </a>
                   </div>
                 </div>
@@ -62,7 +72,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-warm-white/40 mb-1">Studio Address</h4>
                     <p className="text-sm font-sans text-warm-white/95 font-medium leading-relaxed max-w-xs">
-                      Basirhat, West Bengal
+                      Kolkata Station Road, Kolkata, India, West Bengal
                     </p>
                   </div>
                 </div>
@@ -72,8 +82,8 @@ const Contact = () => {
             {/* Google Map Embed */}
             <div className="w-full h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 relative">
               <iframe
-                title="S.M Design & Construction Location"
-                src="https://www.google.com/maps?q=Basirhat,%20West%20Bengal&output=embed"
+                title="AS Interior Studio Location"
+                src="https://www.google.com/maps?q=Kolkata%20Station%20Road,%20Kolkata,%20India,%20West%20Bengal&output=embed"
                 className="w-full h-full border-0 grayscale contrast-125 brightness-75"
                 allowFullScreen
                 loading="lazy"
@@ -100,6 +110,7 @@ const Contact = () => {
                 <div>
                   <input
                     type="text"
+                    name="name"
                     required
                     placeholder="Full Name"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-rich-bronze/50 transition-colors"
@@ -108,6 +119,7 @@ const Contact = () => {
                 <div>
                   <input
                     type="tel"
+                    name="phone"
                     required
                     placeholder="Phone Number"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-rich-bronze/50 transition-colors"
@@ -115,28 +127,31 @@ const Contact = () => {
                 </div>
                 <div>
                   <select
+                    name="service"
                     required
                     defaultValue=""
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm text-warm-white/60 focus:outline-none focus:border-rich-bronze/50 transition-colors appearance-none"
                   >
                     <option value="" disabled className="bg-charcoal-black text-warm-white">Select Service Required</option>
-                    <option value="residential" className="bg-charcoal-black text-warm-white">Residential Design</option>
-                    <option value="kitchen" className="bg-charcoal-black text-warm-white">Modular Kitchen</option>
-                    <option value="bedroom" className="bg-charcoal-black text-warm-white">Bedroom Interior</option>
-                    <option value="living" className="bg-charcoal-black text-warm-white">Living Room Design</option>
-                    <option value="office" className="bg-charcoal-black text-warm-white">Office Interior</option>
-                    <option value="commercial" className="bg-charcoal-black text-warm-white">Commercial Interior</option>
+                    <option value="Residential Design" className="bg-charcoal-black text-warm-white">Residential Design</option>
+                    <option value="Modular Kitchen" className="bg-charcoal-black text-warm-white">Modular Kitchen</option>
+                    <option value="Bedroom Interior" className="bg-charcoal-black text-warm-white">Bedroom Interior</option>
+                    <option value="Living Room Design" className="bg-charcoal-black text-warm-white">Living Room Design</option>
+                    <option value="Office Interior" className="bg-charcoal-black text-warm-white">Office Interior</option>
+                    <option value="Commercial Interior" className="bg-charcoal-black text-warm-white">Commercial Interior</option>
                   </select>
                 </div>
                 <div>
                   <input
                     type="text"
+                    name="budget"
                     placeholder="Estimated Budget (e.g. ₹5 - 10 Lakhs)"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-rich-bronze/50 transition-colors"
                   />
                 </div>
                 <div>
                   <textarea
+                    name="message"
                     rows={4}
                     placeholder="Briefly describe your project vision..."
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-rich-bronze/50 transition-colors resize-none"
@@ -160,11 +175,11 @@ const Contact = () => {
             <div className="flex items-center gap-4">
               <img 
                 src={`${import.meta.env.BASE_URL}images/logo.svg`}
-                alt="S.M Design & Construction Logo" 
+                alt="AS Interior Studio Logo" 
                 className="h-20 md:h-24 w-auto object-contain" 
               />
               <span className="sr-only font-serif text-2xl md:text-3xl font-semibold text-warm-white">
-                S.M Design & Construction
+                AS Interior Studio
               </span>
             </div>
             <p className="text-xs font-sans text-warm-white/40 mt-1">Transforming Spaces Into Timeless Experiences.</p>
@@ -178,7 +193,7 @@ const Contact = () => {
           </div>
 
           <p className="text-xs font-sans text-warm-white/40">
-            © {new Date().getFullYear()} S.M Design & Construction. All rights reserved.
+            © {new Date().getFullYear()} AS Interior Studio. All rights reserved.
           </p>
         </div>
       </div>

@@ -107,9 +107,9 @@ const Services = () => {
                       <p className="text-sm font-sans text-charcoal-black/60 leading-relaxed line-clamp-3">
                         {service.desc}
                       </p>
-                    </div>
+                </div>
                 <a
-                  href={`https://wa.me/917074802534?text=Hello%20S.M%20Design%20%26%20Construction%2C%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}%20services.`}
+                  href={`https://wa.me/917074802534?text=${encodeURIComponent(`Hello AS Interior Studio, I would like to enquire about your ${service.title} services.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 w-full py-3 bg-rich-bronze text-warm-white rounded-xl text-center text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-black transition-colors duration-300 flex items-center justify-center gap-2 group-hover:scale-[1.02] active:scale-[0.98]"

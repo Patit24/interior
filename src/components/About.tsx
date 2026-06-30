@@ -10,15 +10,15 @@ const About = () => {
           {/* Left Side: Story & Features */}
           <div className="text-left">
             <span className="text-sm font-sans tracking-[0.25em] uppercase text-rich-bronze font-medium inline-block mb-3">
-              About S.M Design & Construction
+              About AS Interior Studio
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-charcoal-black font-serif mb-8 leading-tight">
               Creating Beautiful Spaces <br />
-              <span className="italic font-light text-rich-bronze">Across Kolkata & Basirhat</span>
+              <span className="italic font-light text-rich-bronze">Across Kolkata</span>
             </h2>
 
             <p className="text-base text-charcoal-black/70 mb-10 leading-relaxed max-w-xl">
-              We believe a well-designed space is not just about aesthetics; it is about how you experience it. At S.M Design & Construction, the premier luxury interior designers in Kolkata, we combine architectural precision with high-end styling to transform residential and commercial spaces into timeless experiences. From concept consultation to complete turnkey execution in Basirhat and greater Kolkata, we curate narratives that inspire.
+              We believe a well-designed space is not just about aesthetics; it is about how you experience it. At AS Interior Studio, the premier luxury interior designers in Kolkata, we combine architectural precision with high-end styling to transform residential and commercial spaces into timeless experiences. From concept consultation to complete turnkey execution around Kolkata Station Road and greater Kolkata, we curate narratives that inspire.
             </p>
 
             <div className="grid grid-cols-2 gap-8 border-t border-soft-beige pt-10">

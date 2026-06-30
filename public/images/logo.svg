@@ -1,6 +1,6 @@
 <svg width="860" height="300" viewBox="0 0 860 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">S.M Design &amp; Construction logo</title>
-  <desc id="desc">A gold architectural mark with the words S.M Design &amp; Construction.</desc>
+  <title id="title">AS Interior Studio logo</title>
+  <desc id="desc">A gold architectural mark with the words AS Interior Studio.</desc>
   <defs>
     <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#FFE76A"/>
@@ -28,13 +28,13 @@
 
   <g>
     <text x="305" y="118" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" letter-spacing="4">
-      S.M
+      AS
     </text>
     <text x="309" y="178" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="3">
-      DESIGN &amp;
+      INTERIOR
     </text>
     <text x="309" y="228" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="3">
-      CONSTRUCTION
+      STUDIO
     </text>
     <path d="M309 247H735" stroke="#B68D40" stroke-width="4" stroke-linecap="round"/>
   </g>
