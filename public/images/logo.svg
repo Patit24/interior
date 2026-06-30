@@ -30,11 +30,11 @@
     <text x="305" y="118" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" letter-spacing="4">
       AS
     </text>
-    <text x="309" y="178" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="3">
-      INTERIOR
+    <text x="309" y="178" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="2">
+      Interior
     </text>
-    <text x="309" y="228" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="3">
-      STUDIO
+    <text x="309" y="228" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="2">
+      Studio
     </text>
     <path d="M309 247H735" stroke="#B68D40" stroke-width="4" stroke-linecap="round"/>
   </g>

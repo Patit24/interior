@@ -1,81 +1,80 @@
 import { motion } from 'framer-motion';
+import { ArrowUpRight, BadgeCheck, DraftingCompass, Layers3 } from 'lucide-react';
 
 const About = () => {
-  const livingRoomImage = `url("${import.meta.env.BASE_URL}images/living.png")`;
+  const founderImage = `${import.meta.env.BASE_URL}images/as-interior-founder.png`;
 
   return (
     <section id="about" className="py-24 bg-warm-white relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rich-bronze/40 to-transparent" />
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side: Story & Features */}
+        <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-14 xl:gap-20 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="relative"
+          >
+            <div className="absolute -inset-6 bg-rich-bronze/10 blur-3xl rounded-full opacity-70" />
+            <div className="relative overflow-hidden rounded-[2rem] bg-charcoal-black shadow-2xl aspect-[4/5] md:aspect-[5/6] max-h-[720px]">
+              <img
+                src={founderImage}
+                alt="AS Interior Studio founder portrait"
+                className="h-full w-full object-cover object-[50%_35%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-black/70 via-transparent to-transparent" />
+              <div className="absolute left-5 right-5 bottom-5 md:left-7 md:right-7 md:bottom-7 rounded-2xl border border-white/15 bg-charcoal-black/65 backdrop-blur-xl p-5 text-left">
+                <p className="text-xs font-sans uppercase tracking-[0.22em] text-rich-bronze mb-2">Studio Leadership</p>
+                <h3 className="text-2xl md:text-3xl text-warm-white font-serif leading-tight">AS Interior Studio</h3>
+                <p className="mt-2 text-sm text-warm-white/70 leading-relaxed">
+                  Personal supervision, practical planning, and refined execution for homes and commercial spaces.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
           <div className="text-left">
             <span className="text-sm font-sans tracking-[0.25em] uppercase text-rich-bronze font-medium inline-block mb-3">
               About AS Interior Studio
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-charcoal-black font-serif mb-8 leading-tight">
-              Creating Beautiful Spaces <br />
-              <span className="italic font-light text-rich-bronze">Across Kolkata</span>
+              Designing calm, modern spaces with <br />
+              <span className="italic font-light text-rich-bronze">clear execution.</span>
             </h2>
 
-            <p className="text-base text-charcoal-black/70 mb-10 leading-relaxed max-w-xl">
-              We believe a well-designed space is not just about aesthetics; it is about how you experience it. At AS Interior Studio, the premier luxury interior designers in Kolkata, we combine architectural precision with high-end styling to transform residential and commercial spaces into timeless experiences. From concept consultation to complete turnkey execution around Kolkata Station Road and greater Kolkata, we curate narratives that inspire.
+            <p className="text-base text-charcoal-black/70 mb-6 leading-relaxed max-w-2xl">
+              AS Interior Studio creates thoughtful interiors for Kolkata homes, offices, and commercial spaces. Every project starts with a clear understanding of how the space should feel, function, and age beautifully.
+            </p>
+            <p className="text-base text-charcoal-black/60 mb-10 leading-relaxed max-w-2xl">
+              From layout planning and material selection to site coordination and final styling, we keep the process structured, transparent, and tuned to your daily life.
             </p>
 
-            <div className="grid grid-cols-2 gap-8 border-t border-soft-beige pt-10">
-              <div>
-                <h4 className="text-4xl font-serif text-rich-bronze font-bold mb-1">100%</h4>
-                <p className="text-sm font-sans text-charcoal-black/60 uppercase tracking-wider font-semibold">End-to-End Solutions</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+              <div className="border border-charcoal-black/10 bg-white/60 p-5 rounded-2xl">
+                <DraftingCompass className="text-rich-bronze mb-4" size={24} strokeWidth={1.7} />
+                <h4 className="text-base font-serif text-charcoal-black mb-2">Space Planning</h4>
+                <p className="text-xs leading-relaxed text-charcoal-black/55">Layouts shaped for comfort, storage, movement, and light.</p>
               </div>
-              <div>
-                <h4 className="text-4xl font-serif text-rich-bronze font-bold mb-1">98%</h4>
-                <p className="text-sm font-sans text-charcoal-black/60 uppercase tracking-wider font-semibold">Client Satisfaction</p>
+              <div className="border border-charcoal-black/10 bg-white/60 p-5 rounded-2xl">
+                <Layers3 className="text-rich-bronze mb-4" size={24} strokeWidth={1.7} />
+                <h4 className="text-base font-serif text-charcoal-black mb-2">Material Detail</h4>
+                <p className="text-xs leading-relaxed text-charcoal-black/55">Finishes, textures, and fixtures selected with purpose.</p>
               </div>
-              <div>
-                <h4 className="text-4xl font-serif text-rich-bronze font-bold mb-1">150+</h4>
-                <p className="text-sm font-sans text-charcoal-black/60 uppercase tracking-wider font-semibold">Residential Projects</p>
-              </div>
-              <div>
-                <h4 className="text-4xl font-serif text-rich-bronze font-bold mb-1">50+</h4>
-                <p className="text-sm font-sans text-charcoal-black/60 uppercase tracking-wider font-semibold">Commercial Spaces</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side: Blueprint Reveal Animation */}
-          <div className="relative flex justify-center">
-            <div className="relative w-full max-w-[500px] h-[550px] rounded-3xl overflow-hidden shadow-2xl bg-charcoal-black">
-              {/* Image 1: Blueprint / Line art (simulate via canvas style filter or custom overlay) */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
-                style={{ 
-                  backgroundImage: livingRoomImage,
-                  filter: 'grayscale(1) invert(0.9) contrast(2) brightness(0.8)',
-                }}
-              />
-              {/* Blue overlay tint to look like blueprint */}
-              <div className="absolute inset-0 bg-[#0033aa]/20 mix-blend-multiply pointer-events-none" />
-              
-              {/* Blueprint grid lines */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-
-              {/* Image 2: Clean Render (Revealed on hover/scroll/click) */}
-              <motion.div 
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: livingRoomImage }}
-                initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
-                whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 1.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              />
-
-              {/* Reveal text overlay */}
-              <div className="absolute bottom-8 left-8 right-8 glass-dark rounded-2xl p-6 z-10 text-left">
-                <span className="text-xs font-sans tracking-widest uppercase text-rich-bronze font-bold mb-1 block">Concept to Reality</span>
-                <p className="text-sm font-sans text-warm-white/90">
-                  Slide or hover to witness how architectural outlines transform into premium finishes.
-                </p>
+              <div className="border border-charcoal-black/10 bg-white/60 p-5 rounded-2xl">
+                <BadgeCheck className="text-rich-bronze mb-4" size={24} strokeWidth={1.7} />
+                <h4 className="text-base font-serif text-charcoal-black mb-2">Turnkey Work</h4>
+                <p className="text-xs leading-relaxed text-charcoal-black/55">Coordinated execution from concept to handover.</p>
               </div>
             </div>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-3 rounded-full bg-charcoal-black px-6 py-3 text-sm font-semibold text-warm-white transition-colors hover:bg-rich-bronze"
+            >
+              Start Your Project
+              <ArrowUpRight size={18} />
+            </a>
           </div>
         </div>
       </div>
