@@ -15,6 +15,8 @@
       <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.24"/>
     </filter>
   </defs>
+  <rect width="860" height="300" rx="38" fill="#050505"/>
+  <rect x="14" y="14" width="832" height="272" rx="30" stroke="#B68D40" stroke-opacity="0.32" stroke-width="2"/>
 
   <g filter="url(#shadow)">
     <path d="M101 190H245L173 40L101 190Z" fill="url(#gold)"/>
@@ -27,13 +29,13 @@
   </g>
 
   <g>
-    <text x="305" y="118" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" letter-spacing="4">
-      AS
+    <text x="305" y="118" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" letter-spacing="6">
+      A S
     </text>
-    <text x="309" y="178" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="2">
-      Interior
+    <text x="309" y="178" fill="#F8D35C" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="2">
+      INTERIOR
     </text>
-    <text x="309" y="228" fill="#F0B12B" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="2">
+    <text x="309" y="228" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="600" letter-spacing="1">
       Studio
     </text>
     <path d="M309 247H735" stroke="#B68D40" stroke-width="4" stroke-linecap="round"/>

@@ -20,10 +20,11 @@ const Navbar = () => {
   });
 
   const navLinks = [
+    { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
+    { name: 'Work', href: '#work' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'About', href: '#about' },
-    { name: 'Process', href: '#process' },
   ];
 
   return (
@@ -39,8 +40,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
-        <div className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-300 ${
-          isScrolled ? 'glass' : 'bg-transparent'
+        <div className={`flex items-center justify-between rounded-full px-5 md:px-7 py-3 transition-all duration-300 bg-charcoal-black/90 border border-rich-bronze/20 shadow-[0_18px_45px_rgba(0,0,0,0.25)] backdrop-blur-xl ${
+          isScrolled ? 'bg-charcoal-black/95' : 'bg-charcoal-black/85'
         }`}>
           {/* Logo */}
           <Magnetic range={30} strength={0.25}>
@@ -48,7 +49,7 @@ const Navbar = () => {
               <img 
                 src={`${import.meta.env.BASE_URL}images/logo.svg`}
                 alt="AS Interior Studio Logo" 
-                className="h-12 md:h-14 w-auto object-contain" 
+                className="h-16 md:h-20 w-auto object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.42)]" 
               />
               <span className={`sr-only font-serif text-lg md:text-2xl font-semibold transition-colors ${
                 isScrolled ? 'text-charcoal-black' : 'text-warm-white'
@@ -65,9 +66,7 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   className={`text-sm font-medium tracking-wide transition-colors py-2 px-1 ${
-                    isScrolled 
-                      ? 'text-charcoal-black/80 hover:text-rich-bronze' 
-                      : 'text-warm-white/90 hover:text-rich-bronze'
+                    'text-warm-white/90 hover:text-rich-bronze'
                   }`}
                 >
                   {link.name}
@@ -81,14 +80,14 @@ const Navbar = () => {
             <Magnetic range={30} strength={0.25} className="hidden md:inline-flex">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-6 py-2.5 bg-charcoal-black text-warm-white rounded-full text-sm font-medium hover:bg-rich-bronze transition-colors duration-300"
+                className="inline-flex items-center justify-center px-6 py-2.5 bg-rich-bronze text-charcoal-black rounded-full text-sm font-semibold hover:bg-warm-white transition-colors duration-300"
               >
                 Get Consultation
               </a>
             </Magnetic>
             <button
               className={`md:hidden p-2 transition-colors ${
-                isScrolled ? 'text-charcoal-black' : 'text-warm-white'
+                'text-warm-white'
               }`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >

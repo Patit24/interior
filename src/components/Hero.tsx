@@ -18,7 +18,7 @@ const Hero = () => {
   const cardY = useTransform(scrollYProgress, [0, 1], [0, -80]); // Slightly lower maximum scroll offset to keep it tight
 
   return (
-    <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-charcoal-black">
+    <div id="home" ref={containerRef} className="relative h-screen w-full overflow-hidden bg-charcoal-black">
       {/* Background Image with Cinematic Motion */}
       <motion.div 
         className="absolute inset-0 w-full h-full"

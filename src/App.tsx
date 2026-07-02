@@ -3,6 +3,7 @@ import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Work from './components/Work';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -41,6 +42,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Work />
         <About />
         <Portfolio />
         <WhyChooseUs />

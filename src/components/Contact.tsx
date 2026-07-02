@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Contact = () => {
+  const studioAddress = 'Ab 105, Street Number 88, AB Block (Newtown), Newtown, Kolkata, New Town, West Bengal 700156';
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.currentTarget as HTMLFormElement;
@@ -49,7 +51,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-warm-white/40 mb-1">Call Us</h4>
-                    <p className="text-sm font-sans text-warm-white/95 font-medium">070748 02534</p>
+                    <p className="text-sm font-sans text-warm-white/95 font-medium">+91 70748 02534</p>
+                    <p className="text-sm font-sans text-warm-white/95 font-medium">+91 90830 70734</p>
                   </div>
                 </div>
 
@@ -59,8 +62,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-warm-white/40 mb-1">Email Us</h4>
-                    <a href="mailto:skajimali07@gmail.com" className="text-sm font-sans text-warm-white/95 font-medium hover:text-rich-bronze transition-colors">
-                      skajimali07@gmail.com
+                    <a href="mailto:aziminterior07@gmail.com" className="text-sm font-sans text-warm-white/95 font-medium hover:text-rich-bronze transition-colors">
+                      aziminterior07@gmail.com
                     </a>
                   </div>
                 </div>
@@ -72,7 +75,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-warm-white/40 mb-1">Studio Address</h4>
                     <p className="text-sm font-sans text-warm-white/95 font-medium leading-relaxed max-w-xs">
-                      Kolkata Station Road, Kolkata, India, West Bengal
+                      {studioAddress}
                     </p>
                   </div>
                 </div>
@@ -83,7 +86,7 @@ const Contact = () => {
             <div className="w-full h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 relative">
               <iframe
                 title="AS Interior Studio Location"
-                src="https://www.google.com/maps?q=Kolkata%20Station%20Road,%20Kolkata,%20India,%20West%20Bengal&output=embed"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(studioAddress)}&output=embed`}
                 className="w-full h-full border-0 grayscale contrast-125 brightness-75"
                 allowFullScreen
                 loading="lazy"
@@ -187,9 +190,9 @@ const Contact = () => {
           
           <div className="flex flex-wrap gap-8 text-xs font-sans uppercase tracking-widest text-warm-white/50">
             <a href="#services" className="hover:text-rich-bronze transition-colors">Services</a>
+            <a href="#work" className="hover:text-rich-bronze transition-colors">Work</a>
             <a href="#portfolio" className="hover:text-rich-bronze transition-colors">Portfolio</a>
             <a href="#about" className="hover:text-rich-bronze transition-colors">About</a>
-            <a href="#process" className="hover:text-rich-bronze transition-colors">Process</a>
           </div>
 
           <p className="text-xs font-sans text-warm-white/40">

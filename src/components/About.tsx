@@ -40,7 +40,7 @@ const About = () => {
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-charcoal-black font-serif mb-8 leading-tight">
               Designing calm, modern spaces with <br />
-              <span className="italic font-light text-rich-bronze">clear execution.</span>
+              <span className="italic font-light text-rich-bronze">In India.</span>
             </h2>
 
             <p className="text-base text-charcoal-black/70 mb-6 leading-relaxed max-w-2xl">
